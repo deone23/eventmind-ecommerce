@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Package, ShoppingCart, Users, TrendingUp, AlertTriangle, Activity } from 'lucide-react';
-import { Card, Badge } from '../../components/ui';
-import { formatCurrency } from '../../utils';
+import { Card, Badge } from '~/components/ui';
+import { formatCurrency } from '~/utils/helpers';
 
 const AdminDashboard: React.FC = () => {
   const stats = [

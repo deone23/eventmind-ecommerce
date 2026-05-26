@@ -12,11 +12,21 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./dist/types",
     "jsx": "react-jsx",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "~/components/ui": ["src/components/ui/index.ts"],
+      "~/services/mockData": ["src/services/mockData.ts"],
+      "~/utils/helpers": ["src/utils/helpers.ts"]
+    },
 
     /* Linting */
     "noUnusedLocals": false,

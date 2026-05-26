@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Activity, AlertTriangle, Zap, Database, GitBranch, TrendingUp } from 'lucide-react';
-import { Card, Badge, Spinner } from '../components/ui';
+import { Card, Badge, Spinner } from '~/components/ui';
 import { useQuery } from '@tanstack/react-query';
-import { mockServiceHealth, mockIncidents } from '../services';
-import { formatRelativeTime } from '../utils';
+import { mockServiceHealth, mockIncidents } from '~/services/mockData';
+import { formatRelativeTime } from '~/utils/helpers';
 
 const EventMindOpsPage: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<'overview' | 'incidents' | 'kafka' | 'traces'>('overview');
