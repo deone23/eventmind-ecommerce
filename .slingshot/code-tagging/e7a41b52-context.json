@@ -1,0 +1,30 @@
+{
+  "filename": "index.ts",
+  "path": "src\\services\\index.ts",
+  "version": "1.1",
+  "files": {
+    "d65e6075": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "FRONTEND_INTEGRATION_GUIDE.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            2804
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "6825bff0": {
+      "value": "from the above context and I have completed the back-end development  all the microservices attached the frontend-integraton-guide complete inegration of all the microserivces with fron-end"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

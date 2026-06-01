@@ -1,0 +1,102 @@
+{
+  ".env.example": {
+    "filename": ".env.example",
+    "path": ".env.example",
+    "version": "1.2",
+    "contextFile": "59a10eff-context.json",
+    "chunks": {
+      "e08175": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780252556,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "fb7553c7"
+        },
+        "hash": "fdbdf5ef",
+        "messageId": "system_4ffa5050-5d1f-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 6/1/2026, 12:05:56 AM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e08175",
+        "hash": "b4c516ee",
+        "encoded": "#%20API%20Configuration",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e08175",
+        "hash": "b82cfe0a",
+        "encoded": "VITE_API_BASE_URL=http://localhost:8080",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e08175",
+        "hash": "0a587929",
+        "encoded": "VITE_USER_SERVICE_URL=http://localhost:8081",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e08175",
+        "hash": "8c1be2e5",
+        "encoded": "VITE_PRODUCT_SERVICE_URL=http://localhost:8082",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e08175",
+        "hash": "b8a5d404",
+        "encoded": "VITE_CART_SERVICE_URL=http://localhost:8083",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e08175",
+        "hash": "31f9f944",
+        "encoded": "VITE_ORDER_SERVICE_URL=http://localhost:8084",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e08175",
+        "hash": "6e851d20",
+        "encoded": "VITE_PAYMENT_SERVICE_URL=http://localhost:8086",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e08175",
+        "hash": "7cd43b1e",
+        "encoded": "VITE_NOTIFICATION_SERVICE_URL=http://localhost:8087",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e08175",
+        "hash": "e494bef2",
+        "encoded": "#%20EventMind%20AI%20Services",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e08175",
+        "hash": "f618d822",
+        "encoded": "VITE_KAFKA_MONITOR_URL=http://localhost:8088",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "e08175",
+        "hash": "18d8f3f2",
+        "encoded": "VITE_INCIDENT_SERVICE_URL=http://localhost:8089",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "e08175",
+        "hash": "0b4e6465",
+        "encoded": "VITE_AI_SERVICE_URL=http://localhost:8090",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

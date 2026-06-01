@@ -1,0 +1,103 @@
+{
+  "src\\utils\\config.ts": {
+    "filename": "config.ts",
+    "path": "src\\utils\\config.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d51ece": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230764,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "e387f408",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:02:44 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "1": {
+        "chunkId": "d51ece",
+        "hash": "8f7cd98c",
+        "encoded": "api:%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d51ece",
+        "hash": "1190efe8",
+        "encoded": "baseUrl:%20import.meta.env.VITE_API_BASE_URL%20%7C%7C%20'http://localhost:8080',",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "d51ece",
+        "hash": "d3ce9395",
+        "encoded": "userService:%20import.meta.env.VITE_USER_SERVICE_URL%20%7C%7C%20'http://localhost:8081',",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d51ece",
+        "hash": "3de4500a",
+        "encoded": "productService:%20import.meta.env.VITE_PRODUCT_SERVICE_URL%20%7C%7C%20'http://localhost:8082',",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d51ece",
+        "hash": "e60b934e",
+        "encoded": "cartService:%20import.meta.env.VITE_CART_SERVICE_URL%20%7C%7C%20'http://localhost:8083',",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d51ece",
+        "hash": "d3d84f68",
+        "encoded": "orderService:%20import.meta.env.VITE_ORDER_SERVICE_URL%20%7C%7C%20'http://localhost:8084',",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d51ece",
+        "hash": "ea25ab39",
+        "encoded": "paymentService:%20import.meta.env.VITE_PAYMENT_SERVICE_URL%20%7C%7C%20'http://localhost:8086',",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d51ece",
+        "hash": "6ecefb1b",
+        "encoded": "notificationService:%20import.meta.env.VITE_NOTIFICATION_SERVICE_URL%20%7C%7C%20'http://localhost:8087',",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d51ece",
+        "hash": "8dc6f0a0",
+        "encoded": "kafkaMonitor:%20import.meta.env.VITE_KAFKA_MONITOR_URL%20%7C%7C%20'http://localhost:8088',",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d51ece",
+        "hash": "c01bbc1c",
+        "encoded": "incidentService:%20import.meta.env.VITE_INCIDENT_SERVICE_URL%20%7C%7C%20'http://localhost:8089',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d51ece",
+        "hash": "cbedff36",
+        "encoded": "aiService:%20import.meta.env.VITE_AI_SERVICE_URL%20%7C%7C%20'http://localhost:8090',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d51ece",
+        "hash": "2af362fb",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

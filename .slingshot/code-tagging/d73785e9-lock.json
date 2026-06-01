@@ -1,0 +1,67 @@
+{
+  "src\\utils\\constants.ts": {
+    "filename": "constants.ts",
+    "path": "src\\utils\\constants.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d7d5ce": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230743,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "ffe787bf",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:02:23 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "39": {
+        "chunkId": "d7d5ce",
+        "hash": "efabf784",
+        "encoded": "//%20Cart",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "d7d5ce",
+        "hash": "9775dfb5",
+        "encoded": "CART:%20'/api/cart',",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "d7d5ce",
+        "hash": "f1678554",
+        "encoded": "ADD_TO_CART:%20'/api/cart/items',",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d7d5ce",
+        "hash": "5b4be496",
+        "encoded": "UPDATE_CART_ITEM:%20'/api/cart/item/:id',",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d7d5ce",
+        "hash": "bd00e5b2",
+        "encoded": "REMOVE_FROM_CART:%20'/api/cart/item/:id',",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d7d5ce",
+        "hash": "28f6f1e3",
+        "encoded": "CLEAR_CART:%20'/api/cart',",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

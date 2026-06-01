@@ -38,11 +38,11 @@ export const API_ENDPOINTS = {
   CATEGORIES: '/categories',
   
   // Cart
-  CART: '/cart',
-  ADD_TO_CART: '/cart/add',
-  UPDATE_CART_ITEM: '/cart/update',
-  REMOVE_FROM_CART: '/cart/remove',
-  CLEAR_CART: '/cart/clear',
+  CART: '/api/cart',
+  ADD_TO_CART: '/api/cart/items',
+  UPDATE_CART_ITEM: '/api/cart/item/:id',
+  REMOVE_FROM_CART: '/api/cart/item/:id',
+  CLEAR_CART: '/api/cart',
   
   // Orders
   ORDERS: '/orders',
@@ -51,12 +51,12 @@ export const API_ENDPOINTS = {
   CANCEL_ORDER: '/orders/:id/cancel',
   
   // Payment
-  PAYMENT_METHODS: '/payment/methods',
-  PROCESS_PAYMENT: '/payment/process',
+  PAYMENT_METHODS: '/api/payment/methods',
+  PROCESS_PAYMENT: '/api/payments/process',
   
   // Notifications
-  NOTIFICATIONS: '/notifications',
-  MARK_READ: '/notifications/:id/read',
+  NOTIFICATIONS: '/api/notifications',
+  MARK_READ: '/api/notifications/:id/read',
   
   // EventMind AI
   KAFKA_EVENTS: '/kafka/events',

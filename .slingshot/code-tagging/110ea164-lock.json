@@ -1,0 +1,559 @@
+{
+  "src\\services\\cartService.ts": {
+    "filename": "cartService.ts",
+    "path": "src\\services\\cartService.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ac0ce4": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230703,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "5ee76c34",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:01:43 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ac0ce4",
+        "hash": "9250b0fc",
+        "encoded": "import%20%7B%20axiosInstance%20%7D%20from%20'../api';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ac0ce4",
+        "hash": "4205dfa1",
+        "encoded": "import%20%7B%20ApiResponse,%20CartItem,%20CartState%20%7D%20from%20'../types';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ac0ce4",
+        "hash": "0a910eac",
+        "encoded": "import%20%7B%20API_ENDPOINTS%20%7D%20from%20'../utils/constants';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ac0ce4",
+        "hash": "7e913570",
+        "encoded": "//%20Cart%20API%20Response%20Types",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ac0ce4",
+        "hash": "6d265cfd",
+        "encoded": "interface%20CartApiResponse%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ac0ce4",
+        "hash": "afc6ccf8",
+        "encoded": "cartId:%20string;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ac0ce4",
+        "hash": "ff6d0b00",
+        "encoded": "userId:%20string;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ac0ce4",
+        "hash": "a48002e6",
+        "encoded": "items:%20Array%3C%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ac0ce4",
+        "hash": "27c9c4d8",
+        "encoded": "cartItemId:%20string;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ac0ce4",
+        "hash": "d5909271",
+        "encoded": "product:%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ac0ce4",
+        "hash": "00572ef7",
+        "encoded": "productId:%20string;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ac0ce4",
+        "hash": "94af8b8f",
+        "encoded": "name:%20string;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ac0ce4",
+        "hash": "3931b26c",
+        "encoded": "price:%20number;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ac0ce4",
+        "hash": "1927774e",
+        "encoded": "imageUrl:%20string;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ac0ce4",
+        "hash": "ab0cd041",
+        "encoded": "inStock:%20boolean;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ac0ce4",
+        "hash": "f2015c93",
+        "encoded": "stock:%20number;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ac0ce4",
+        "hash": "146d9b82",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ac0ce4",
+        "hash": "9ad4a442",
+        "encoded": "quantity:%20number;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ac0ce4",
+        "hash": "521246ae",
+        "encoded": "unitPrice:%20number;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ac0ce4",
+        "hash": "bbc92443",
+        "encoded": "totalPrice:%20number;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ac0ce4",
+        "hash": "d1517cc1",
+        "encoded": "addedAt:%20string;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ac0ce4",
+        "hash": "27631990",
+        "encoded": "%7D%3E;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ac0ce4",
+        "hash": "946d85f1",
+        "encoded": "summary:%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ac0ce4",
+        "hash": "5b037e03",
+        "encoded": "itemCount:%20number;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ac0ce4",
+        "hash": "18de0d1b",
+        "encoded": "uniqueItemCount:%20number;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ac0ce4",
+        "hash": "519545b9",
+        "encoded": "subtotal:%20number;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ac0ce4",
+        "hash": "5dcc8656",
+        "encoded": "tax:%20number;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ac0ce4",
+        "hash": "4bae81d3",
+        "encoded": "shipping:%20number;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ac0ce4",
+        "hash": "f0a8ff25",
+        "encoded": "total:%20number;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ac0ce4",
+        "hash": "a826e909",
+        "encoded": "currency:%20string;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "ac0ce4",
+        "hash": "8080b9e9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ac0ce4",
+        "hash": "4b0785c8",
+        "encoded": "updatedAt:%20string;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ac0ce4",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ac0ce4",
+        "hash": "c3e90210",
+        "encoded": "interface%20AddToCartRequest%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ac0ce4",
+        "hash": "7a88c668",
+        "encoded": "productId:%20string;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ac0ce4",
+        "hash": "f4f832a4",
+        "encoded": "quantity:%20number;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ac0ce4",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ac0ce4",
+        "hash": "77dfc5ba",
+        "encoded": "interface%20UpdateCartItemRequest%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ac0ce4",
+        "hash": "45a87799",
+        "encoded": "quantity:%20number;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ac0ce4",
+        "hash": "5663967b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ac0ce4",
+        "hash": "6c394e92",
+        "encoded": "export%20const%20cartService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ac0ce4",
+        "hash": "e189d5fa",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ac0ce4",
+        "hash": "4580447f",
+        "encoded": "*%20Get%20user's%20cart",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ac0ce4",
+        "hash": "c73a8fa9",
+        "encoded": "*%20GET%20/api/cart",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "ac0ce4",
+        "hash": "d02f616b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ac0ce4",
+        "hash": "a2a254e0",
+        "encoded": "getCart:%20async%20():%20Promise%3CCartApiResponse%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "ac0ce4",
+        "hash": "149b5b8f",
+        "encoded": "const%20response%20=%20await%20axiosInstance.get%3CApiResponse%3CCartApiResponse%3E%3E(API_ENDPOINTS.CART);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ac0ce4",
+        "hash": "40f6613c",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ac0ce4",
+        "hash": "cfafa4e3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ac0ce4",
+        "hash": "21c3f89a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ac0ce4",
+        "hash": "1b8e0f36",
+        "encoded": "*%20Add%20item%20to%20cart",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ac0ce4",
+        "hash": "a8fcb025",
+        "encoded": "*%20POST%20/api/cart/items",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "ac0ce4",
+        "hash": "0b974afb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ac0ce4",
+        "hash": "288744f9",
+        "encoded": "addItem:%20async%20(data:%20AddToCartRequest):%20Promise%3CCartApiResponse%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "ac0ce4",
+        "hash": "9271ef85",
+        "encoded": "const%20response%20=%20await%20axiosInstance.post%3CApiResponse%3CCartApiResponse%3E%3E(",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ac0ce4",
+        "hash": "4cb7faf2",
+        "encoded": "API_ENDPOINTS.ADD_TO_CART,",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "ac0ce4",
+        "hash": "954e375b",
+        "encoded": "data",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ac0ce4",
+        "hash": "8bde6d40",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "ac0ce4",
+        "hash": "d9b74f90",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ac0ce4",
+        "hash": "3668736d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ac0ce4",
+        "hash": "731c559b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "ac0ce4",
+        "hash": "eb1ef2fd",
+        "encoded": "*%20Update%20cart%20item%20quantity",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "ac0ce4",
+        "hash": "e82289e9",
+        "encoded": "*%20PUT%20/api/cart/item/%7BcartItemId%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ac0ce4",
+        "hash": "91b2d6df",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ac0ce4",
+        "hash": "e39476cf",
+        "encoded": "updateItem:%20async%20(cartItemId:%20string,%20data:%20UpdateCartItemRequest):%20Promise%3CCartApiResponse%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "ac0ce4",
+        "hash": "33746942",
+        "encoded": "const%20response%20=%20await%20axiosInstance.put%3CApiResponse%3CCartApiResponse%3E%3E(",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "ac0ce4",
+        "hash": "64c7a538",
+        "encoded": "API_ENDPOINTS.UPDATE_CART_ITEM.replace(':id',%20cartItemId),",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ac0ce4",
+        "hash": "c6a1fcf4",
+        "encoded": "data",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "ac0ce4",
+        "hash": "18089eed",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ac0ce4",
+        "hash": "8edb8df0",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "ac0ce4",
+        "hash": "11fc4278",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "ac0ce4",
+        "hash": "1439656b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ac0ce4",
+        "hash": "36788476",
+        "encoded": "*%20Remove%20item%20from%20cart",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "ac0ce4",
+        "hash": "4bf76fac",
+        "encoded": "*%20DELETE%20/api/cart/item/%7BcartItemId%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "ac0ce4",
+        "hash": "5b6485aa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ac0ce4",
+        "hash": "20b612d7",
+        "encoded": "removeItem:%20async%20(cartItemId:%20string):%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "ac0ce4",
+        "hash": "aac7d385",
+        "encoded": "await%20axiosInstance.delete(",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ac0ce4",
+        "hash": "01e9c036",
+        "encoded": "API_ENDPOINTS.REMOVE_FROM_CART.replace(':id',%20cartItemId)",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "ac0ce4",
+        "hash": "188d87da",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ac0ce4",
+        "hash": "4aad17c4",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "ac0ce4",
+        "hash": "5fea1916",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "ac0ce4",
+        "hash": "f1af7d98",
+        "encoded": "*%20Clear%20entire%20cart",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "ac0ce4",
+        "hash": "af8e6bc7",
+        "encoded": "*%20DELETE%20/api/cart",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "ac0ce4",
+        "hash": "c35ef544",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "ac0ce4",
+        "hash": "f67a0207",
+        "encoded": "clearCart:%20async%20():%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "ac0ce4",
+        "hash": "50a10d24",
+        "encoded": "await%20axiosInstance.delete(API_ENDPOINTS.CLEAR_CART);",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "ac0ce4",
+        "hash": "ee8434e0",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "ac0ce4",
+        "hash": "4e8395b7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "src\\services\\index.ts": {
+    "filename": "index.ts",
+    "path": "src\\services\\index.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "402eb8": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230743,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "47492423",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:02:23 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "402eb8",
+        "hash": "dd323227",
+        "encoded": "export%20*%20from%20'./authService';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "402eb8",
+        "hash": "16dff4a8",
+        "encoded": "export%20*%20from%20'./productService';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "402eb8",
+        "hash": "43754f10",
+        "encoded": "export%20*%20from%20'./orderService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "402eb8",
+        "hash": "e3a1d2c8",
+        "encoded": "export%20*%20from%20'./cartService';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "402eb8",
+        "hash": "ae552517",
+        "encoded": "export%20*%20from%20'./paymentService';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "402eb8",
+        "hash": "9043e7f0",
+        "encoded": "export%20*%20from%20'./notificationService';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "402eb8",
+        "hash": "b42e374f",
+        "encoded": "export%20*%20from%20'./mockData';",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

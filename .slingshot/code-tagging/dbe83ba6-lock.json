@@ -1,0 +1,91 @@
+{
+  "src\\api\\axiosInstance.ts": {
+    "filename": "axiosInstance.ts",
+    "path": "src\\api\\axiosInstance.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "43ec0c": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230906,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "8a3ff7c0",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:05:06 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "103": {
+        "chunkId": "43ec0c",
+        "hash": "9e5bb2d7",
+        "encoded": "//%20Service%20instances",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "43ec0c",
+        "hash": "99e7c49a",
+        "encoded": "export%20const%20userServiceApi%20=%20createServiceInstance(config.api.userService);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "43ec0c",
+        "hash": "31ad01cd",
+        "encoded": "export%20const%20productServiceApi%20=%20createServiceInstance(config.api.productService);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "43ec0c",
+        "hash": "d539fc65",
+        "encoded": "export%20const%20cartServiceApi%20=%20createServiceInstance(config.api.cartService);",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "43ec0c",
+        "hash": "154eb46b",
+        "encoded": "export%20const%20orderServiceApi%20=%20createServiceInstance(config.api.orderService);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "43ec0c",
+        "hash": "4d7ed484",
+        "encoded": "export%20const%20paymentServiceApi%20=%20createServiceInstance(config.api.paymentService);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "43ec0c",
+        "hash": "f691b6a5",
+        "encoded": "export%20const%20notificationServiceApi%20=%20createServiceInstance(config.api.notificationService);",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "43ec0c",
+        "hash": "8c4ad148",
+        "encoded": "export%20const%20kafkaMonitorApi%20=%20createServiceInstance(config.api.kafkaMonitor);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "43ec0c",
+        "hash": "378bbdea",
+        "encoded": "export%20const%20incidentServiceApi%20=%20createServiceInstance(config.api.incidentService);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "43ec0c",
+        "hash": "6d25bc0c",
+        "encoded": "export%20const%20aiServiceApi%20=%20createServiceInstance(config.api.aiService);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

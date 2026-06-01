@@ -1,0 +1,685 @@
+{
+  "src\\services\\notificationService.ts": {
+    "filename": "notificationService.ts",
+    "path": "src\\services\\notificationService.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d2a1ef": {
+        "user": "Vinay Mourya",
+        "model": "gpt-4o",
+        "timestamp": 1780230704,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "6825bff0",
+          "files": "d65e6075"
+        },
+        "hash": "97cc56e0",
+        "messageId": "system_6c7796d0-5cec-11f1-9a2e-9dde8ddaba07",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Vinay Mourya\n- **model**: gpt-4o\n- **timestamp**: 5/31/2026, 6:01:44 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d2a1ef",
+        "hash": "9250b0fc",
+        "encoded": "import%20%7B%20axiosInstance%20%7D%20from%20'../api';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "d2a1ef",
+        "hash": "5669b203",
+        "encoded": "import%20%7B%20ApiResponse,%20PaginatedResponse%20%7D%20from%20'../types';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d2a1ef",
+        "hash": "0a910eac",
+        "encoded": "import%20%7B%20API_ENDPOINTS%20%7D%20from%20'../utils/constants';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d2a1ef",
+        "hash": "c85fe4f0",
+        "encoded": "//%20Notification%20Types",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d2a1ef",
+        "hash": "44513f10",
+        "encoded": "export%20interface%20NotificationItem%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d2a1ef",
+        "hash": "bd16b319",
+        "encoded": "notificationId:%20string;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d2a1ef",
+        "hash": "ff6d0b00",
+        "encoded": "userId:%20string;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d2a1ef",
+        "hash": "8089c50f",
+        "encoded": "type:%20'ORDER_CONFIRMATION'%20%7C%20'PAYMENT_SUCCESS'%20%7C%20'PAYMENT_FAILED'%20%7C%20'ORDER_SHIPPED'%20%7C%20'ORDER_DELIVERED'%20%7C%20'PROMOTIONAL';",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d2a1ef",
+        "hash": "5a7ebf79",
+        "encoded": "title:%20string;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d2a1ef",
+        "hash": "74673122",
+        "encoded": "message:%20string;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d2a1ef",
+        "hash": "994d3539",
+        "encoded": "status:%20'READ'%20%7C%20'UNREAD';",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d2a1ef",
+        "hash": "f67b1b27",
+        "encoded": "createdAt:%20string;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d2a1ef",
+        "hash": "6c226a0a",
+        "encoded": "readAt?:%20string;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "d2a1ef",
+        "hash": "66d45cc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "d2a1ef",
+        "hash": "f0666739",
+        "encoded": "export%20interface%20NotificationPreferences%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d2a1ef",
+        "hash": "366ddc1c",
+        "encoded": "emailEnabled:%20boolean;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "d2a1ef",
+        "hash": "9dda214f",
+        "encoded": "smsEnabled:%20boolean;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d2a1ef",
+        "hash": "f69ce3f5",
+        "encoded": "pushEnabled:%20boolean;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d2a1ef",
+        "hash": "f9ac6ae6",
+        "encoded": "preferences:%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d2a1ef",
+        "hash": "ae40e342",
+        "encoded": "orderUpdates:%20boolean;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "d2a1ef",
+        "hash": "65f0a10c",
+        "encoded": "paymentUpdates:%20boolean;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d2a1ef",
+        "hash": "e2b731b0",
+        "encoded": "promotional:%20boolean;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d2a1ef",
+        "hash": "9eb29d7f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "d2a1ef",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "d2a1ef",
+        "hash": "fcdfcef5",
+        "encoded": "export%20interface%20NotificationListResponse%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "d2a1ef",
+        "hash": "d2465a34",
+        "encoded": "notifications:%20NotificationItem%5B%5D;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "d2a1ef",
+        "hash": "c5eeee29",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "d2a1ef",
+        "hash": "b1b57622",
+        "encoded": "currentPage:%20number;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "d2a1ef",
+        "hash": "2483ee80",
+        "encoded": "pageSize:%20number;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "d2a1ef",
+        "hash": "69d78129",
+        "encoded": "totalPages:%20number;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "d2a1ef",
+        "hash": "c5c2d851",
+        "encoded": "totalElements:%20number;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "d2a1ef",
+        "hash": "b2fa52a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "d2a1ef",
+        "hash": "dfad4947",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "d2a1ef",
+        "hash": "651461a9",
+        "encoded": "export%20const%20notificationService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "d2a1ef",
+        "hash": "696c804d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "d2a1ef",
+        "hash": "6b4faf08",
+        "encoded": "*%20Get%20user%20notifications%20(paginated)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "d2a1ef",
+        "hash": "a8947699",
+        "encoded": "*%20GET%20/api/notifications",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "d2a1ef",
+        "hash": "ac7fba9c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d2a1ef",
+        "hash": "1cbf6ff1",
+        "encoded": "getNotifications:%20async%20(",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d2a1ef",
+        "hash": "8be10449",
+        "encoded": "page:%20number%20=%200,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d2a1ef",
+        "hash": "9ac6b997",
+        "encoded": "size:%20number%20=%2020,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "d2a1ef",
+        "hash": "de15dd8b",
+        "encoded": "sortBy:%20string%20=%20'createdAt',",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "d2a1ef",
+        "hash": "86e229f9",
+        "encoded": "sortDirection:%20'ASC'%20%7C%20'DESC'%20=%20'DESC'",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "d2a1ef",
+        "hash": "0b9a4e51",
+        "encoded": "):%20Promise%3CNotificationListResponse%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "d2a1ef",
+        "hash": "bc3c87bc",
+        "encoded": "const%20response%20=%20await%20axiosInstance.get%3CApiResponse%3CNotificationListResponse%3E%3E(",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "d2a1ef",
+        "hash": "0c5deced",
+        "encoded": "API_ENDPOINTS.NOTIFICATIONS,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "d2a1ef",
+        "hash": "39b366ef",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "d2a1ef",
+        "hash": "0c8e6019",
+        "encoded": "params:%20%7B%20page,%20size,%20sortBy,%20sortDirection%20%7D,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "d2a1ef",
+        "hash": "88fadba2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "d2a1ef",
+        "hash": "fcbe4ad9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "d2a1ef",
+        "hash": "72aed140",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "d2a1ef",
+        "hash": "1c27ad0f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "d2a1ef",
+        "hash": "5987bfad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "d2a1ef",
+        "hash": "7ce8444b",
+        "encoded": "*%20Get%20notification%20by%20ID",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "d2a1ef",
+        "hash": "6061e582",
+        "encoded": "*%20GET%20/api/notifications/%7Bid%7D",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "d2a1ef",
+        "hash": "3de85b9d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "d2a1ef",
+        "hash": "5bbd5984",
+        "encoded": "getNotificationById:%20async%20(notificationId:%20string):%20Promise%3CNotificationItem%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "d2a1ef",
+        "hash": "d45a927f",
+        "encoded": "const%20response%20=%20await%20axiosInstance.get%3CApiResponse%3CNotificationItem%3E%3E(",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "d2a1ef",
+        "hash": "08b99373",
+        "encoded": "API_ENDPOINTS.NOTIFICATIONS%20+%20%60/$%7BnotificationId%7D%60",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "d2a1ef",
+        "hash": "75f87d49",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "d2a1ef",
+        "hash": "0040fb14",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "d2a1ef",
+        "hash": "7b88621a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "d2a1ef",
+        "hash": "c07a803a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "d2a1ef",
+        "hash": "0de7bfb0",
+        "encoded": "*%20Mark%20notification%20as%20read",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "d2a1ef",
+        "hash": "c4ab4570",
+        "encoded": "*%20PUT%20/api/notifications/%7Bid%7D/read",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "d2a1ef",
+        "hash": "848553ec",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "d2a1ef",
+        "hash": "ce8069d1",
+        "encoded": "markAsRead:%20async%20(notificationId:%20string):%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "d2a1ef",
+        "hash": "a86ca92b",
+        "encoded": "await%20axiosInstance.put(",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "d2a1ef",
+        "hash": "35c25c69",
+        "encoded": "API_ENDPOINTS.MARK_READ.replace(':id',%20notificationId)",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "d2a1ef",
+        "hash": "faaefeeb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "d2a1ef",
+        "hash": "11fc4278",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "d2a1ef",
+        "hash": "1439656b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "d2a1ef",
+        "hash": "a55f2e19",
+        "encoded": "*%20Mark%20all%20notifications%20as%20read",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "d2a1ef",
+        "hash": "8673020c",
+        "encoded": "*%20PUT%20/api/notifications/read-all",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "d2a1ef",
+        "hash": "5b6485aa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "d2a1ef",
+        "hash": "cd2de3ff",
+        "encoded": "markAllAsRead:%20async%20():%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "d2a1ef",
+        "hash": "68b11e0a",
+        "encoded": "await%20axiosInstance.put('/api/notifications/read-all');",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "d2a1ef",
+        "hash": "f5451944",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "d2a1ef",
+        "hash": "0c8c5ee6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "d2a1ef",
+        "hash": "84725c83",
+        "encoded": "*%20Get%20notification%20preferences",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "d2a1ef",
+        "hash": "bc75b481",
+        "encoded": "*%20GET%20/api/notifications/preferences",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "d2a1ef",
+        "hash": "0bf47674",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "d2a1ef",
+        "hash": "2b74ed2d",
+        "encoded": "getPreferences:%20async%20():%20Promise%3CNotificationPreferences%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "d2a1ef",
+        "hash": "a75e053d",
+        "encoded": "const%20response%20=%20await%20axiosInstance.get%3CApiResponse%3CNotificationPreferences%3E%3E(",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "d2a1ef",
+        "hash": "4def4832",
+        "encoded": "'/api/notifications/preferences'",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "d2a1ef",
+        "hash": "c9e60ca2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "d2a1ef",
+        "hash": "d528b1db",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "d2a1ef",
+        "hash": "f460c207",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "d2a1ef",
+        "hash": "87fa6196",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "d2a1ef",
+        "hash": "91616229",
+        "encoded": "*%20Update%20notification%20preferences",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "d2a1ef",
+        "hash": "680a6f0f",
+        "encoded": "*%20PUT%20/api/notifications/preferences",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "d2a1ef",
+        "hash": "d684199a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "d2a1ef",
+        "hash": "37917ba8",
+        "encoded": "updatePreferences:%20async%20(data:%20NotificationPreferences):%20Promise%3CNotificationPreferences%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "d2a1ef",
+        "hash": "1c01c686",
+        "encoded": "const%20response%20=%20await%20axiosInstance.put%3CApiResponse%3CNotificationPreferences%3E%3E(",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "d2a1ef",
+        "hash": "2a315a15",
+        "encoded": "'/api/notifications/preferences',",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "d2a1ef",
+        "hash": "0c8b4285",
+        "encoded": "data",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "d2a1ef",
+        "hash": "a4716299",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "d2a1ef",
+        "hash": "b2b075f7",
+        "encoded": "return%20response.data.data!;",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "d2a1ef",
+        "hash": "08978537",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "d2a1ef",
+        "hash": "de3ac4ef",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "d2a1ef",
+        "hash": "c639e5ea",
+        "encoded": "*%20Delete%20notification",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "d2a1ef",
+        "hash": "08070bc2",
+        "encoded": "*%20DELETE%20/api/notifications/%7Bid%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "d2a1ef",
+        "hash": "93cd7883",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "d2a1ef",
+        "hash": "61d74d7c",
+        "encoded": "deleteNotification:%20async%20(notificationId:%20string):%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "d2a1ef",
+        "hash": "8639943a",
+        "encoded": "await%20axiosInstance.delete(",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "d2a1ef",
+        "hash": "4f20ada9",
+        "encoded": "API_ENDPOINTS.NOTIFICATIONS%20+%20%60/$%7BnotificationId%7D%60",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "d2a1ef",
+        "hash": "68f14e46",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "d2a1ef",
+        "hash": "7c0ad85a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "d2a1ef",
+        "hash": "cc3f6ac3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

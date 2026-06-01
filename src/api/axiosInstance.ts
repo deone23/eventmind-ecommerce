@@ -104,6 +104,7 @@ export const createServiceInstance = (baseURL: string): AxiosInstance => {
 // Service instances
 export const userServiceApi = createServiceInstance(config.api.userService);
 export const productServiceApi = createServiceInstance(config.api.productService);
+export const cartServiceApi = createServiceInstance(config.api.cartService);
 export const orderServiceApi = createServiceInstance(config.api.orderService);
 export const paymentServiceApi = createServiceInstance(config.api.paymentService);
 export const notificationServiceApi = createServiceInstance(config.api.notificationService);
